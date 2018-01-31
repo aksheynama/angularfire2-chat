@@ -6,7 +6,8 @@ import {Component} from '@angular/core';
   templateUrl: './teams.component.html'
 })
 export class TeamsComponent {
-	
-	var database = firebase.database();
+	constructor(){
+
+  }
 
 }

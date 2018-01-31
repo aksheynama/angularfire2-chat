@@ -1,11 +1,12 @@
 import {Component} from '@angular/core';
 import { LocalDataSource } from 'ng2-smart-table';
+
 	@Component({
 	  selector: 'teamtable',
 	  styleUrls: ['./teamtable.component.css'],
 	  templateUrl: './teamtable.component.html'
 	})
-	export class TeamtableComponent {
+	export class TeamTableComponent {
 
 	settings = {
 	  columns: {
@@ -77,8 +78,8 @@ import { LocalDataSource } from 'ng2-smart-table';
 
 	constructor() {
 	  this.source = new LocalDataSource(this.data); // create the source
-	  
-		
+
+
 	}
 
 	onSearch(query: string = '') {
@@ -120,8 +121,8 @@ import { LocalDataSource } from 'ng2-smart-table';
 		      field: 'pitch',
 		      search: query,
 		    },
-		  ], false); 
-		  // second parameter specifying whether to perform 'AND' or 'OR' search 
+		  ], false);
+		  // second parameter specifying whether to perform 'AND' or 'OR' search
 		  // (meaning all columns should contain search query or at least one)
 		  // 'AND' by default, so changing to 'OR' by setting false here
 		}
